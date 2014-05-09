@@ -216,8 +216,8 @@ Vagrant.configure("2") do |config|
         su vagrant -c "/home/vagrant/devstack/stack.sh"
         # WORKAROUND after https://review.openstack.org/#/c/88382/
         cp /opt/stack/nova-docker/etc/nova/rootwrap.d/docker.filters  /etc/nova/rootwrap.d/docker.filters
-        docker pull paulczar/slugrunner
-        docker tag paulczar/slugrunner 127.0.0.1:5042/slugrunner
+        docker pull solum/slugrunner
+        docker tag solum/slugrunner 127.0.0.1:5042/slugrunner
         docker push 127.0.0.1:5042/slugrunner
       SCRIPT
     else
